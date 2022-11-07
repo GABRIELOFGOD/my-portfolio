@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+img{
+    height: 100vh;
+    width: 100%;
+
+}
+
+nav{
+    width: 100%;
+    height: fit-content;
+    background: blue;
+    position: absolute;
+    display: flex;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav h1{
+    color: white;
+    margin: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.fun-list{
+    display: flex;
+}
+
+nav input{
+    visibility: hidden;
+    display: none;
+}
+
+.fun-list ul{
+    list-style: none;
+    display: inline-flex;
+    float: right;
+    align-items: center;
+    margin: auto;
+
+}
+
+.fun-list ul li{
+    margin: 10px 2px;
+    padding: 10px 10px;
+    font-size: .8em;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.fun-list ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.fun-list ul li:hover{
+    background: white;
+    transition: .5s;
+}
+
+.nav-bar{
+    width: 30px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    background: transparent;
+    border: 2px black solid;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-bar i{
+    color: black;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding: 5px;
+}
+
+.nav-bar:hover{
+    background-color: white;
+    border: white 2px solid;
+}
+
+
+
+
+
+
+
+@media(max-width: 800px){
+    .fun-list{
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        background-color: blue;
+        top: 45px;
+        right: -250px;
+        transition: 1s;
+    }
+
+    .fun-list ul{
+        margin: auto;
+        position: relative;
+        display: block;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        align-items: center;
+    }
+
+    .fun-list ul li{
+        margin: 20px auto;
+        justify-content: center;
+        border-radius: 0;
+    }
+
+    .fun-list ul li a{
+        justify-content: center;
+        padding: 10px;
+        margin: auto;
+        width: 100%;
+        position: relative;
+    }
+
+    #check:checked ~.fun-list{
+        right: 0;
+    }
+
+    nav h1{
+        font-size: 2.5em;
+        text-align: center;
+        margin: auto;
+        
+    }
+}
+
+@media(min-width: 799px){
+    .nav-bar{
+        display: none;
+    }
+}

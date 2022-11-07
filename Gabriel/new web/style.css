@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     align-items: center;
+    box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -10,7 +11,8 @@ nav{
     width: 95%;
     height: 50px;
     margin: 10px 10px;
-    justify-content: center;
+    height: 12%;
+    margin-bottom: 0;
     
 }
 
@@ -23,16 +25,20 @@ nav{
     padding: 0;
     width: 100%;
     height: 100vh;
+    justify-content: center;
 }
 
-.nave{
+.mynav nav{
+    width: 95vw;
     justify-content: space-between;
     align-items: center;
     display: flex;
+    justify-self: center;
+
 }
 
 .image{
-    width: 150px;
+    width: 20vw;
     margin-top: 10px;
     margin-left: 10px;
     cursor: pointer;
@@ -58,6 +64,13 @@ nav{
     text-decoration: none;
     padding: 10px;
 }
+
+.nave .spe span{
+    width: 30%;
+    height: 50px;
+    color: greenyellow;
+}
+
 
 .haed h1{
     color: white;
@@ -106,14 +119,270 @@ nav{
 }
 
 .dnav{
+    width: 90%;
     align-items: center;
-    width: 30%;
-    display: inline;
-
+    display: flexbox;
+    margin-top: 50px;
+    padding-left: 50px;
 }
 
-.dnav.spa1.spa2.spa3{
+.dnav span{
+    width: 29%;
+    align-items: center;
+    display: inline-block;
+    margin: 20px;
+    box-sizing: border-box;
 }
-.dnav h3{
+
+.dnav span p{
+    display: block;
+    background-color: gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    height: 180px;
+    overflow: scroll;
+    box-sizing: border-box;
+}
+
+.dnav .spac{
+    justify-content: center;
+    display: flexbox;
+    
+}
+
+.dnav span h3{
     text-align: center;
+    margin-bottom: 5px;
+    display: flexbox;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+
+.navbar-toggle{
+    background-color: transparent;
+    align-items: center;
+    border: 1px solid white;
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    border-radius: 3px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.navbar-toggle:hover{
+    background-color: white;
+    border: 2px solid grey;
+}
+
+.navbar-toggle span{
+    width: 60%;
+    background-color: grey;
+    border-radius: 5px;
+    position: relative;
+    height: 2px;
+    display: block;
+    margin: 5px auto;
+}
+
+form{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+form button{
+    margin: auto;
+    background-color: greenyellow;
+    color: white;
+    width: 25%;
+    display: flex;
+    height: 30px;
+    padding: 12px;
+    cursor: pointer;
+    margin-top: 15px;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+form button:hover{
+    background-color: black;
+}
+
+form input{
+    width: 100%;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 5px;
+    height: 30px;
+    margin: 5px 0;
+}
+
+form input:focus{
+    background-color: gainsboro;
+
+}
+
+.space{
+    width: 95%;
+    height: 100px;
+    background-color: greenyellow;
+    position: absolute;
+    margin: auto;
+    left: 10px;
+}
+
+@media (min-width: 1200px){
+    .navbar-toggle{
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .navbar-toggle{
+        display: none;
+    }
+
+    .dnav span{
+        width: 27%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .nave ul{
+        display: none;
+    }
+    .image{
+        width: 30%;
+        justify-items: center;
+        cursor: pointer;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        box-shadow: black 0, 0, 30px;
+    }
+
+    .dnav span{
+        width: 100%;
+        display: block;
+        margin: 20px;
+        box-sizing: border-box;
+    }
+
+    .dnav span p{
+        display: block;
+        background-color: gainsboro;
+        border-radius: 5px;
+        height: fit-content;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    .dnav{
+        width: 100%;
+        align-items: center;
+        display: flexbox;
+        margin-top: 10px;
+        padding: 10px;
+        margin-right: 20px;
+    }
+
+    .dnav span h3{
+        text-align: center;
+        margin-bottom: 5px;
+        display: flexbox;
+        margin-top: 0;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width: 767px){
+    .nave ul{
+        display: none;
+    }
+    .image{
+        width: 30%;
+        justify-items: center;
+        cursor: pointer;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        box-shadow: black 0, 0, 30px;
+    }
+
+    .dnav span{
+        width: 100%;
+        display: block;
+        margin: 20px;
+        box-sizing: border-box;
+    }
+
+    .dnav span p{
+        display: block;
+        background-color: gainsboro;
+        border-radius: 5px;
+        height: fit-content;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    .dnav{
+        width: 100%;
+        align-items: center;
+        display: flexbox;
+        margin-top: 10px;
+        padding: 10px;
+        margin-right: 20px;
+    }
+
+    .dnav span h3{
+        text-align: center;
+        margin-bottom: 5px;
+        display: flexbox;
+        margin-top: 0;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .mynav{
+        height: 50vh;
+    }
+
+    .haed h1{
+        color: white;
+        position: relative;
+        margin-left: 5px;
+        margin-top: 30px;
+        width: 50%;
+        font-size: 1.5em;
+    }
+    
+    .haed h1 span{
+        font-size: 2em;
+    }
+    
+    .social{
+        border-width: 30%;
+        align-items: center;
+        position: absolute;
+        padding-top: 50px;
+        padding-left: 50px;
+        margin-bottom: 10px;
+    }
+    
+    .social button{
+        margin: 0 5px;
+        background: transparent;
+        border: 0;
+    }
+    
 }
